@@ -1,0 +1,24 @@
+# permissions for end users to edit nodecleaners.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: nodecleaner-editor-role
+rules:
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodecleaners
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodecleaners/status
+  verbs:
+  - get

@@ -1,0 +1,6 @@
+apiVersion: cache.jack-rev.github.com/v1alpha1
+kind: NodeCleaner
+metadata:
+  name: nodecleaner-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,24 @@
+# permissions for end users to edit nodelabellers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: nodelabeller-editor-role
+rules:
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodelabellers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodelabellers/status
+  verbs:
+  - get

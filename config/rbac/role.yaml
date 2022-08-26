@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodecleaners
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodecleaners/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodecleaners/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodelabellers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodelabellers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cache.jack-rev.github.com
+  resources:
+  - nodelabellers/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,6 @@
+apiVersion: cache.jack-rev.github.com/v1alpha1
+kind: NodeLabeller
+metadata:
+  name: nodelabeller-sample
+spec:
+  # TODO(user): Add fields here
